@@ -9,7 +9,7 @@ public class User {
     private String password;
     private int points;
     private int amount;
-    private ArrayList<String> giftRewards = new ArrayList<>();
+    public ArrayList<String> giftRewards = new ArrayList<>();
 
     public User(int id, String name, String password, int points) {
         this.id = id;
