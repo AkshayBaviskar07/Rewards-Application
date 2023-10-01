@@ -49,11 +49,9 @@ public class UserService {
                 }
             }
 
-            if(loginUser == false){
-                InvalidUserException ie = new InvalidUserException("Wrong creadential..");
-                System.out.println(ie.getMessage());
-                throw ie;
-            }
+            InvalidUserException ie = new InvalidUserException("Wrong creadential..");
+            System.out.println(ie.getMessage());
+            throw ie;
         } catch(InvalidUserException iue) {
             System.out.println("Enter valid credential or you will blocked..");
             System.out.println("-----------------------------------------------------------");
@@ -76,7 +74,7 @@ public class UserService {
                     }
                 }
 
-                if (loginUser == false) {
+                if (!loginUser) {
                     InvalidUserException ie = new InvalidUserException("Wrong creadential..");
                     System.out.println(ie.getMessage());
                     throw ie;
